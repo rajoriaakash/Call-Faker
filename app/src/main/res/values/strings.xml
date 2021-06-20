@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Call Faker</string>
+    <string name="choose_caller_image_from_gallery">Choose Caller image from gallery</string>
+</resources>
