@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.callfaker">
+    <uses-permission
+        android:name="android.permission.ANSWER_PHONE_CALLS">
+
+    </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -10,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallFaker">
         <activity android:name=".FakeRingingActivity"></activity>
-        <activity android:name=".CallSettingsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,5 +22,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>
