@@ -25,6 +25,7 @@ class CallPickedActivity : AppCompatActivity() {companion object{
             homeIntent.addCategory(Intent.CATEGORY_HOME)
             homeIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(homeIntent)
+            finish()
         }
     }
 

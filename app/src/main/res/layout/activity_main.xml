@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15"
-        android:src="@color/design_default_color_primary_dark"/>
+        android:src="@drawable/ic_unknown_person"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/choose_dp"
@@ -67,7 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Enter time in seconds"
         android:inputType="time"
+        android:text="0"
         tools:layout_editor_absoluteX="104dp"
         tools:layout_editor_absoluteY="452dp"
         app:layout_constraintBottom_toBottomOf="parent"

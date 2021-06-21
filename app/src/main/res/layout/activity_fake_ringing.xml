@@ -53,11 +53,12 @@
         android:background="@drawable/ic_accept_call"
         android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.806"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
+        app:layout_constraintVertical_bias="0.874"
+        android:foreground="@drawable/ic_accept_call"/>
 
     <Button
         android:id="@+id/rejectcall"
@@ -67,11 +68,12 @@
         android:background="@drawable/ic_end_call"
         android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
+        app:layout_constraintVertical_bias="0.874"
+        android:foreground="@drawable/ic_end_call"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

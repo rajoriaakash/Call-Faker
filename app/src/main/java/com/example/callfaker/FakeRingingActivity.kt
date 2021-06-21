@@ -14,6 +14,7 @@ class FakeRingingActivity : AppCompatActivity() {
     companion object{
         const val NUMBER_EXTRA = "number_extra"
         const val NAME_EXTRA = "name_extra"
+        const val IMAGE_EXTRA = "image_extra"
     }
     var callerNumber : String = ""
     var callerName :String = ""
@@ -42,6 +43,7 @@ class FakeRingingActivity : AppCompatActivity() {
             homeIntent.addCategory(Intent.CATEGORY_HOME)
             homeIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(homeIntent)
+            finish()
         }
     }
 
