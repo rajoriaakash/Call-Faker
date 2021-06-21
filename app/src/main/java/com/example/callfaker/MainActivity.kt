@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button = choose_dp
-        imageView =profile_picture
         button.setOnClickListener {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivityForResult(gallery, pickImage)

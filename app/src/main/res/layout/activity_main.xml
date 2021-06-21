@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/profile_picture"
+        android:id="@+id/main_dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:civ_border_color="#3f51b5"

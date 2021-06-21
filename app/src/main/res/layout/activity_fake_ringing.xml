@@ -8,7 +8,7 @@
     android:background="#52B3CF">
 
     <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/profile_picture"
+        android:id="@+id/fakeRinging_dp"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:background="#52B3CF"
