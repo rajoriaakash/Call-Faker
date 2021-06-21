@@ -1,6 +1,7 @@
 package com.example.callfaker
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +11,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var imageView: ImageView
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button = choose_dp
+        imageView =main_dp
         button.setOnClickListener {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivityForResult(gallery, pickImage)
@@ -44,6 +47,9 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(FakeRingingActivity.NUMBER_EXTRA,mobileNumber)
             intent.putExtra(FakeRingingActivity.NAME_EXTRA,callerName)
 //        intent.putExtra(FakeRingingActivity.IMAGE_EXTRA,imageView)
+            imageView.setDrawingCacheEnabled(true)
+            val b: Bitmap = imageView.getDrawingCache()
+            intent.putExtra(FakeRingingActivity.IMAGE_EXTRA, b)
 
             startActivity(intent)
             finish()

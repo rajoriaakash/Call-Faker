@@ -1,6 +1,7 @@
 package com.example.callfaker
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.media.MediaPlayer
 import android.media.RingtoneManager
 import android.net.Uri
@@ -33,6 +34,9 @@ class FakeRingingActivity : AppCompatActivity() {
             ringTone.stop()
             val intent = Intent(this,CallPickedActivity::class.java)
             intent.putExtra(CallPickedActivity.NAME_EXTRA,callerName)
+            fakeRinging_dp.setDrawingCacheEnabled(true)
+            val b: Bitmap = fakeRinging_dp.getDrawingCache()
+            intent.putExtra(CallPickedActivity.IMAGE_EXTRA, b)
             startActivity(intent)
             finish()
         }
@@ -53,6 +57,9 @@ class FakeRingingActivity : AppCompatActivity() {
 
         callerName = intent.getStringExtra(NAME_EXTRA)!!
         if(callerName.isNotBlank()) caller_name.text = callerName
+
+        val bitmap = intent.getParcelableExtra(IMAGE_EXTRA) as Bitmap?
+        fakeRinging_dp.setImageBitmap(bitmap)
     }
 
 
