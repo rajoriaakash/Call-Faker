@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -15,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var imageView: ImageView
-    lateinit var button: FloatingActionButton
+    lateinit var button: Button
     private val pickImage = 100
     private var imageUri: Uri? = null
     override fun onCreate(savedInstanceState: Bundle?) {
